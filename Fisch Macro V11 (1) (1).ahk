@@ -48,26 +48,26 @@ NavigationKey := "\"
 ShakeMode := "Click"
 
 ; Color range to scan for fish bar
-FishBarColorTolerance := 0
+FishBarColorTolerance := 2.5
 
 ; Seconds for click shake to be considered failed
 ClickShakeFailsafe := 20
 ; Color range to scan for "shake" text
 ClickShakeColorTolerance := 1
 ; Delay between each scan in miliseconds
-ClickScanDelay := 100
+ClickScanDelay := 10
 ; How many scans before clicking regardless of repeats
 RepeatBypassCounter := 10
 
 ; Seconds for navigation shake to be considered failed
 NavigationShakeFailsafe := 30
 ; Delay between each "S+Enter" in miliseconds
-NavigationSpamDelay := 10
+NavigationSpamDelay := 0
 
 ;     MINIGAME SETTINGS     ====================================================================================================;
 
 ; Bar size is automatically calculated, set manual value to override
-ManualBarSize := 264.052982
+ManualBarSize := 0
 ; Seconds for calculation to be considered failed
 BarCalculationFailsafe := 10
 ; Color range to scan for initial white bar
@@ -851,7 +851,7 @@ if (ErrorLevel == 0)
 				{
 				tooltip, Ankle Delay: 0, %TooltipX%, %Tooltip13%, 13
 				sleep %AnkleBreakDelay%
-				AnkleBreakDelay := 0
+				AnkleBreakDelay := -10
 				}
 			else
 				{
